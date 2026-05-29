@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cozumel Xperiences — Experiencias Premium de Vino, Aventura y Gastronomía en Cozumel, México.">
+<meta property="og:title" content="Cozumel Xperiences — Vino, Aventura y Gastronomía">
+<meta property="og:description" content="Experiencias premium en Cozumel. Wine tasting, snorkel, buceo, pesca deportiva, clases de cocina.">
+<title>Cozumel Xperiences — Experiencias Premium en Cozumel</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ck:#0B3D52;--ckg:#C9A84C;--ckt:#1A7A6E;--ckd:#041E2C;--ao:#0077B6;--ac:#E85D4A;--at:#00B4D8;--ad:#004F7C;--ag:#00E5FF;--ct:#B85C38;--cs:#E6A817;--cg:#1B4332;--cd:#0F2922;--r:14px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:#f5f5f5;color:#1a1a1a;-webkit-font-smoothing:antialiased}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);box-shadow:0 1px 8px rgba(0,0,0,.08);height:76px;transition:box-shadow .3s}
+.nav.s{box-shadow:0 2px 16px rgba(0,0,0,.14)}
+.ni{max-width:1200px;margin:0 auto;padding:0 1.2rem;height:100%;display:flex;align-items:center;gap:.6rem}
+.lw{display:flex;align-items:center;gap:.7rem;margin-right:auto;cursor:pointer}
+.li{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--ck),var(--ckt));display:flex;align-items:center;justify-content:center;color:var(--ckg);font-size:20px;font-weight:900;flex-shrink:0;box-shadow:0 3px 12px rgba(11,61,82,.3)}
+.lt{display:flex;flex-direction:column;line-height:1.15}
+.lb{font-size:16px;font-weight:900;color:var(--ck);letter-spacing:.8px}
+.ls{font-size:10px;color:#888;letter-spacing:2px;text-transform:uppercase}
+.sb{display:inline-block;background:#EBF4F7;border:1px solid #cde4eb;color:var(--ck);font-size:7.5px;font-weight:800;padding:1px 5px;border-radius:4px;margin-left:5px;vertical-align:middle}
+.nts{display:flex;gap:4px}
+.nt{padding:.55rem 1.15rem;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;font-family:inherit;color:#666;background:none}
+.nt:hover{background:#f0f0f0;color:#333}
+.nt.a-ck{background:var(--ck);color:var(--ckg)}.nt.a-av{background:var(--ao);color:#fff}.nt.a-cu{background:var(--ct);color:#fff}
+.lg{display:flex;border:1.5px solid #ddd;border-radius:8px;overflow:hidden;margin:0 .3rem}
+.lg button{padding:.3rem .55rem;border:none;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;background:#fff;color:#888}
+.lg .on{background:var(--ck);color:var(--ckg)}
+.btk{padding:.55rem 1.2rem;border-radius:25px;border:2px solid var(--ck);background:none;color:var(--ck);font-weight:800;font-size:13px;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .2s}
+.btk:hover{background:var(--ck);color:var(--ckg)}
+.mb{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;padding:.3rem}
+.mm{display:none;position:fixed;top:76px;left:0;right:0;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.12);padding:1rem;z-index:99}
+.mm.o{display:block}
+.mm .nt{display:block;width:100%;text-align:left;padding:.7rem 1rem;margin-bottom:.3rem;font-size:15px}
+.mm .btk{width:100%;margin-top:.5rem;padding:.7rem}
+
+.sec{display:none;padding-top:76px}.sec.on{display:block}
+
+.hero{min-height:92vh;position:relative;overflow:hidden;display:flex;align-items:center}
+.hbg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 8s ease}
+.hero:hover .hbg{transform:scale(1.03)}
+.hgr{position:absolute;inset:0;z-index:1}
+.hc{position:relative;z-index:3;max-width:640px;padding:3.5rem 2.5rem}
+.bdg{display:inline-block;padding:.3rem .9rem;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:900;line-height:1.06;margin-bottom:.8rem;color:#fff}
+.hero h1 em{font-style:normal}
+.hero p{font-size:1.02rem;line-height:1.7;margin-bottom:1.8rem;max-width:480px;color:rgba(255,255,255,.78)}
+.hbs{display:flex;flex-wrap:wrap;gap:.6rem}
+.bh{padding:.8rem 1.8rem;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;border:none;font-family:inherit;transition:all .25s}
+.bh:hover{transform:translateY(-2px)}
+.ps{position:absolute;right:1.5rem;bottom:5.5rem;z-index:5;display:flex;gap:.45rem}
+.pt{width:88px;height:64px;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,.25);box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .2s;cursor:pointer}
+.pt:hover{transform:scale(1.08)}
+.pt img{width:100%;height:100%;object-fit:cover}
+.stb{position:absolute;bottom:0;left:0;right:0;z-index:4;display:flex}
+.st{flex:1;text-align:center;padding:1rem .5rem}
+.st+.st{border-left:1px solid rgba(255,255,255,.08)}
+.sn{font-size:1.3rem;font-weight:900}
+.sl{font-size:.58rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.45);margin-top:.1rem}
+
+.h-ck .hbg{background-image:url('https://img.freepik.com/fotos-premium/copa-vino-tinto-mesa-al-atardecer-junto-al-mar_176873-17606.jpg');background-position:center 40%}
+.h-ck .hgr{background:linear-gradient(100deg,rgba(4,30,44,.94) 0%,rgba(11,61,82,.84) 40%,rgba(26,122,110,.4) 85%,rgba(26,122,110,.15) 100%)}
+.h-ck .bdg{background:rgba(201,168,76,.18);border:1px solid var(--ckg);color:var(--ckg)}
+.h-ck h1 em{color:var(--ckg)}
+.h-ck .bp{background:var(--ckg);color:var(--ckd);box-shadow:0 4px 16px rgba(201,168,76,.35)}
+.h-ck .bs{background:none;color:var(--ckg);border:2px solid var(--ckg)}
+.h-ck .stb{background:rgba(4,30,44,.65);backdrop-filter:blur(8px)}
+.h-ck .sn{color:var(--ckg)}
+
+.h-av .hbg{background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1400&q=80')}
+.h-av .hgr{background:linear-gradient(100deg,rgba(0,50,100,.94) 0%,rgba(0,79,124,.82) 40%,rgba(0,180,216,.35) 85%,rgba(0,180,216,.1) 100%)}
+.h-av .bdg{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff}
+.h-av h1 em{color:var(--ag)}
+.h-av .bp{background:var(--ac);color:#fff;box-shadow:0 4px 16px rgba(232,93,74,.35)}
+.h-av .bs{background:none;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.h-av .stb{background:rgba(0,50,100,.65);backdrop-filter:blur(8px)}
+.h-av .sn{color:var(--ag)}
+
+.h-cu .hbg{background-image:url('https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=1400&q=80');background-position:center 60%}
+.h-cu .hgr{background:linear-gradient(100deg,rgba(15,30,22,.94) 0%,rgba(27,67,50,.85) 40%,rgba(184,92,56,.3) 85%,rgba(184,92,56,.08) 100%)}
+.h-cu .bdg{background:rgba(230,168,23,.18);border:1px solid var(--cs);color:var(--cs)}
+.h-cu h1 em{color:var(--cs)}
+.h-cu .bp{background:var(--ct);color:#fff;box-shadow:0 4px 16px rgba(184,92,56,.35)}
+.h-cu .bs{background:none;color:var(--cs);border:2px solid var(--cs)}
+.h-cu .stb{background:rgba(15,30,22,.65);backdrop-filter:blur(8px)}
+.h-cu .sn{color:var(--cs)}
+
+.cw{max-width:1200px;margin:0 auto;padding:3.5rem 1.5rem}
+.slb{font-size:.65rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:.4rem}
+.stt{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:.5rem}
+.stp{color:#666;line-height:1.7;max-width:580px;margin-bottom:2rem;font-size:.95rem}
+
+.fe{border-radius:var(--r);overflow:hidden;margin-bottom:2.5rem;box-shadow:0 8px 32px rgba(0,0,0,.15)}
+.fe-img{height:300px;background-size:cover;background-position:center;position:relative}
+.fe-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,30,44,.95) 0%,rgba(4,30,44,.4) 60%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:2rem}
+.fe-series{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--ckg);margin-bottom:.4rem}
+.fe-title{font-size:1.8rem;font-weight:900;color:#fff;line-height:1.1;margin-bottom:.3rem}
+.fe-sub{font-size:.85rem;color:rgba(255,255,255,.7);margin-bottom:1rem}
+.fe-details{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.fe-pill{background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:var(--ckg);padding:.25rem .7rem;border-radius:20px;font-size:.72rem;font-weight:700}
+.fe-dj{display:inline-flex;align-items:center;gap:.3rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:.25rem .7rem;border-radius:20px;font-size:.72rem;font-weight:700;color:#fff}
+.fe-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.fe-price{font-size:1.4rem;font-weight:900;color:var(--ckg)}
+.fe-price span{font-size:.75rem;color:rgba(255,255,255,.5);font-weight:400}
+.fe-btn{padding:.7rem 1.8rem;border-radius:25px;border:none;background:var(--ckg);color:var(--ckd);font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit;transition:all .25s}
+.fe-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,.4)}
+
+.cdw{border-radius:var(--r);padding:1.8rem;margin-bottom:2.5rem;display:flex;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.cdt{color:#fff;flex:1;min-width:220px}
+.cdt h3{font-size:1rem;font-weight:700;margin-bottom:.3rem}
+.cdt p{font-size:.82rem;color:rgba(255,255,255,.65)}
+.cdd{display:flex;gap:.5rem}
+.cdb{border-radius:10px;padding:.6rem .85rem;text-align:center;min-width:56px}
+.cdn{font-size:1.5rem;font-weight:900;display:block;line-height:1}
+.cdl{font-size:.55rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.8px}
+
+.eg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;margin-bottom:3rem}
+.ec{border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.1);transition:transform .25s,box-shadow .25s;cursor:pointer}
+.ec:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.ei{height:190px;position:relative;background-size:cover;background-position:center}
+.etg{position:absolute;top:.7rem;right:.7rem;backdrop-filter:blur(6px);padding:.22rem .65rem;border-radius:20px;font-size:.62rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.spb{position:absolute;top:.7rem;left:.7rem;background:var(--ac);padding:.22rem .65rem;border-radius:20px;font-size:.6rem;color:#fff;font-weight:700;animation:pu 2s infinite}
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.65}}
+.eb{padding:1.2rem 1.3rem}
+.edt{font-size:.72rem;font-weight:700;letter-spacing:.5px;margin-bottom:.35rem;text-transform:uppercase}
+.en{font-size:1rem;font-weight:700;margin-bottom:.3rem;color:#111}
+.ed{font-size:.82rem;color:#666;line-height:1.6;margin-bottom:.8rem}
+.ef{display:flex;align-items:center;justify-content:space-between}
+.ep{font-size:1.05rem;font-weight:800}
+.epo{font-size:.72rem;color:#bbb;text-decoration:line-through;margin-left:.3rem}
+.bb{padding:.4rem 1rem;border-radius:20px;border:none;font-weight:700;font-size:.78rem;cursor:pointer;font-family:inherit;transition:all .2s}
+.bb:hover{opacity:.85;transform:scale(1.04)}
+
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:1rem;margin-bottom:3rem}
+.pk{text-align:center;padding:1.4rem 1rem;background:#fff;border-radius:var(--r);box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s}
+.pk:hover{transform:translateY(-3px)}
+.pi{font-size:1.8rem;margin-bottom:.5rem}
+.pn{font-size:.82rem;font-weight:700;margin-bottom:.25rem}
+.pd{font-size:.72rem;color:#777;line-height:1.5}
+
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-bottom:3rem}
+.rv{background:#fff;border-radius:12px;padding:1.2rem;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.rs{color:#F0C040;font-size:.85rem;margin-bottom:.5rem}
+.rt{font-size:.82rem;color:#444;line-height:1.65;margin-bottom:.7rem;font-style:italic}
+.ra{font-size:.72rem;font-weight:700;color:#111}
+.ra span{font-weight:400;color:#999}
+
+.ctb{border-radius:var(--r);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:2rem}
+.ctb h3{color:#fff;font-size:1.2rem;font-weight:800}
+.ctb p{color:rgba(255,255,255,.7);font-size:.85rem}
+.bc{padding:.7rem 1.8rem;border-radius:25px;border:none;font-weight:800;font-size:.9rem;cursor:pointer;font-family:inherit;transition:all .25s}
+.bc:hover{transform:translateY(-2px)}
+
+/* GALLERY / EXPERIENCIAS VIVIDAS */
+.gallery-section{padding:3rem 0;background:#fff;margin-bottom:2rem;border-radius:var(--r)}
+.gallery-header{text-align:center;margin-bottom:2rem;padding:0 1.5rem}
+.gallery-header h2{font-size:1.8rem;font-weight:900;margin-bottom:.5rem}
+.gallery-header p{color:#888;font-size:.9rem;max-width:500px;margin:0 auto}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.5rem;padding:0 1rem}
+.gallery-item{border-radius:12px;overflow:hidden;aspect-ratio:1;background:#e0e0e0;position:relative;cursor:pointer;transition:transform .25s}
+.gallery-item:hover{transform:scale(1.03)}
+.gallery-item img{width:100%;height:100%;object-fit:cover}
+.gallery-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#f8f8f8,#e8e8e8);color:#aaa;gap:.5rem;height:100%}
+.gallery-placeholder span{font-size:2rem}
+.gallery-placeholder p{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.gallery-cta{text-align:center;margin-top:1.5rem;padding:0 1rem}
+.gallery-cta p{font-size:.82rem;color:#888;margin-bottom:.8rem}
+.gallery-cta button{padding:.6rem 1.5rem;border-radius:25px;border:2px solid var(--ck);background:none;color:var(--ck);font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit;transition:all .2s}
+.gallery-cta button:hover{background:var(--ck);color:var(--ckg)}
+
+.mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center;padding:1rem}
+.mo.op{display:flex}
+.md{background:#fff;border-radius:20px;width:100%;max-width:480px;overflow:hidden;animation:mi .3s}
+@keyframes mi{from{transform:translateY(30px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.mh{padding:1.4rem 1.5rem;color:#fff;position:relative}
+.mx{position:absolute;top:.8rem;right:.8rem;background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}
+.mby{padding:1.5rem;max-height:70vh;overflow-y:auto}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-size:.72rem;font-weight:700;color:#555;margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.5px}
+.fg input{width:100%;padding:.6rem .9rem;border:1.5px solid #e0e0e0;border-radius:10px;font-size:.9rem;font-family:inherit;outline:none;transition:border .2s}
+.fg input:focus{border-color:var(--ck)}
+.to{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:1rem}
+.tp{border:2px solid #e0e0e0;border-radius:12px;padding:.75rem;cursor:pointer;transition:all .2s;text-align:center}
+.tn{font-size:.75rem;font-weight:700;color:#333;margin-bottom:.15rem}
+.tpr{font-size:.95rem;font-weight:800}
+.qr{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.ql{font-size:.72rem;font-weight:700;color:#555;text-transform:uppercase;flex:1}
+.qc{display:flex;align-items:center;gap:.5rem}
+.qb{width:30px;height:30px;border-radius:50%;border:1.5px solid #ccc;background:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:inherit}
+.qn{font-size:1rem;font-weight:700;min-width:22px;text-align:center}
+.tr{background:#f7f7f7;border-radius:10px;padding:.75rem 1rem;display:flex;justify-content:space-between;align-items:center;margin-bottom:1.1rem}
+.tl{font-size:.82rem;color:#666}
+.ta{font-size:1.15rem;font-weight:800;color:#111}
+.bpy{width:100%;padding:.85rem;border:none;border-radius:12px;font-size:.95rem;font-weight:800;cursor:pointer;font-family:inherit;transition:all .2s}
+.bpy:hover{opacity:.9;transform:translateY(-1px)}
+.snote{text-align:center;font-size:.68rem;color:#aaa;margin-top:.6rem}
+
+.wa{position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 4px 16px rgba(37,211,102,.4);cursor:pointer;transition:transform .2s;text-decoration:none}
+.wa:hover{transform:scale(1.1)}
+
+.ft{background:#111;color:#aaa;padding:2.5rem 1.5rem 1.5rem}
+.fi{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem}
+.ft h4{color:#fff;font-size:.85rem;font-weight:700;margin-bottom:.8rem}
+.ft p,.ft a{font-size:.78rem;line-height:1.7;display:block;color:#777;text-decoration:none;margin-bottom:.3rem}
+.ft a:hover{color:var(--ckg)}
+.fb{max-width:1200px;margin:1.5rem auto 0;padding-top:1.2rem;border-top:1px solid #222;text-align:center;font-size:.7rem;color:#444}
+
+@media(max-width:768px){.nts,.btk,.lg{display:none}.mb{display:block}.hc{padding:2rem 1.2rem}.ps{display:none}.stb{flex-wrap:wrap}.st{flex:1 1 48%}.cdw{flex-direction:column;gap:1rem;padding:1.3rem}.ctb{flex-direction:column;text-align:center;padding:1.5rem}.fe-img{height:220px}.fe-title{font-size:1.3rem}.fe-foot{flex-direction:column;align-items:flex-start}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.eg{grid-template-columns:1fr}.to{grid-template-columns:1fr}.pg{grid-template-columns:repeat(2,1fr)}.rg{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="topbar">
+<div class="ni">
+  <div class="lw" onclick="showTab('ck')"><div class="li">CX</div><div class="lt"><span class="lb">COZUMEL <span class="sb">Since 2022</span></span><span class="ls">XPERIENCES</span></div></div>
+  <div class="nts"><button class="nt" id="t-ck" onclick="showTab('ck')">🍷 Cork Cozumel</button><button class="nt" id="t-av" onclick="showTab('av')">🌊 Adventour</button><button class="nt" id="t-cu" onclick="showTab('cu')">🍽️ Culinary</button></div>
+  <div class="lg"><button id="lES" class="on" onclick="setLang('es')">ES</button><button id="lEN" onclick="setLang('en')">EN</button></div>
+  <button class="btk" onclick="openM('ck')">🎟 Boletos</button>
+  <button class="mb" id="mbtn" onclick="togMM()">☰</button>
+</div>
+</nav>
+<div class="mm" id="mmenu">
+  <button class="nt" onclick="showTab('ck');closeMM()">🍷 Cork Cozumel</button>
+  <button class="nt" onclick="showTab('av');closeMM()">🌊 Cozumel Adventour</button>
+  <button class="nt" onclick="showTab('cu');closeMM()">🍽️ Culinary Xperiences</button>
+  <button class="btk" onclick="openM('ck');closeMM()">🎟 Comprar Boletos</button>
+</div>
+
+<!-- ═══ CORK COZUMEL ═══ -->
+<div class="sec on" id="s-ck">
+<div class="hero h-ck"><div class="hbg"></div><div class="hgr"></div>
+  <div class="hc">
+    <div class="bdg">✦ <span class="t" data-es="Experiencias Premium de Vino" data-en="Premium Wine Experiences">Experiencias Premium de Vino</span></div>
+    <h1><span class="t" data-es="Donde el Vino" data-en="Where Wine">Donde el Vino</span> <em><span class="t" data-es="Encuentra" data-en="Meets">Encuentra</span></em> <span class="t" data-es="el Caribe" data-en="the Caribbean">el Caribe</span></h1>
+    <p class="t" data-es="Barra móvil de vinos y destilados premium para eventos privados, corporativos y celebraciones en Cozumel. Diseñamos tu momento — tú solo disfruta." data-en="Premium mobile wine bar for private, corporate events and celebrations in Cozumel. We design your moment — you just enjoy.">Barra móvil de vinos y destilados premium para eventos privados, corporativos y celebraciones en Cozumel. Diseñamos tu momento — tú solo disfruta.</p>
+    <div class="hbs"><button class="bh bp" onclick="openM('ck')">🎟 <span class="t" data-es="Reservar Evento" data-en="Book Event">Reservar Evento</span></button><button class="bh bs" onclick="document.getElementById('ev-ck').scrollIntoView({behavior:'smooth'})"><span class="t" data-es="Ver Eventos →" data-en="View Events →">Ver Eventos →</span></button></div>
+  </div>
+  <div class="ps"><div class="pt"><img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=200&q=80" alt="Wine"></div><div class="pt"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=200&q=80" alt="Cocktails"></div><div class="pt"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=200&q=80" alt="Wine tasting"></div></div>
+  <div class="stb"><div class="st"><div class="sn">+120</div><div class="sl t" data-es="Eventos" data-en="Events">Eventos</div></div><div class="st"><div class="sn">4.9★</div><div class="sl t" data-es="Calificación" data-en="Rating">Calificación</div></div><div class="st"><div class="sn">15+</div><div class="sl t" data-es="Etiquetas" data-en="Labels">Etiquetas</div></div><div class="st"><div class="sn">2022</div><div class="sl t" data-es="Activos Desde" data-en="Active Since">Activos Desde</div></div></div>
+</div>
+<div class="cw" id="ev-ck">
+  <div class="fe"><div class="fe-img" style="background-image:url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1200&q=80')"><div class="fe-ov"><div class="fe-series">✦ CORK SUNSET SESSIONS — VOL. 1</div><div class="fe-title">Wine, Sunset & Beats</div><div class="fe-sub t" data-es="by Buccanos · DJ Invitado: GIAN" data-en="by Buccanos · Guest DJ: GIAN">by Buccanos · DJ Invitado: GIAN</div><div class="fe-details"><span class="fe-pill">📅 15 de Junio</span><span class="fe-pill">⏱ 2.5 hrs</span><span class="fe-pill">🍷 6 Vinos</span><span class="fe-pill t" data-es="🥂 Canapés incluidos" data-en="🥂 Canapés included">🥂 Canapés incluidos</span><span class="fe-dj">🎧 DJ GIAN</span></div><div class="fe-foot"><div class="fe-price">$1,200 MXN <span class="t" data-es="por persona" data-en="per person">por persona</span></div><button class="fe-btn" onclick="openM('ck')">🎟 <span class="t" data-es="Reservar Ahora →" data-en="Book Now →">Reservar Ahora →</span></button></div></div></div></div>
+
+  <div class="cdw" style="background:var(--ck)"><div class="cdt"><h3 style="color:var(--ckg)">🥂 <span class="t" data-es="Cork Sunset Sessions se acerca" data-en="Cork Sunset Sessions is coming">Cork Sunset Sessions se acerca</span></h3><p class="t" data-es="¡Pocas plazas! Reserva antes que se agoten." data-en="Limited spots! Book before they sell out.">¡Pocas plazas! Reserva antes que se agoten.</p></div><div class="cdd"><div class="cdb" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25)"><span class="cdn" style="color:var(--ckg)" id="c1d">00</span><span class="cdl">Días</span></div><div class="cdb" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25)"><span class="cdn" style="color:var(--ckg)" id="c1h">00</span><span class="cdl">Hrs</span></div><div class="cdb" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25)"><span class="cdn" style="color:var(--ckg)" id="c1m">00</span><span class="cdl">Min</span></div><div class="cdb" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25)"><span class="cdn" style="color:var(--ckg)" id="c1s">00</span><span class="cdl">Seg</span></div></div></div>
+
+  <div class="slb" style="color:var(--ckt)">— <span class="t" data-es="Más Eventos" data-en="More Events">Más Eventos</span></div>
+  <h2 class="stt t" data-es="Experiencias de Vino en Cozumel" data-en="Wine Experiences in Cozumel">Experiencias de Vino en Cozumel</h2>
+  <p class="stp t" data-es="Cada evento es una experiencia curada: vinos de autor, maridajes únicos y el escenario caribeño como fondo perfecto." data-en="Each event is a curated experience: signature wines, unique pairings and the Caribbean as your perfect backdrop.">Cada evento es una experiencia curada: vinos de autor, maridajes únicos y el escenario caribeño como fondo perfecto.</p>
+  <div class="eg">
+    <div class="ec" onclick="openM('ck')"><div class="ei" style="background-image:url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80')"><div class="etg" style="background:rgba(201,168,76,.85);color:var(--ckd)">CORPORATIVO</div></div><div class="eb"><div class="edt" style="color:var(--ckt)">VIE 20 JUN · 7:00 PM</div><div class="en">Noche de Champagne & Spritz</div><div class="ed t" data-es="Barra libre de Spritz artesanal y champagne para eventos empresariales." data-en="Open Spritz bar and champagne for corporate events.">Barra libre de Spritz artesanal y champagne para eventos empresariales.</div><div class="ef"><div><span class="ep" style="color:var(--ck)">$120 USD</span></div><button class="bb" style="background:var(--ck);color:var(--ckg)" onclick="event.stopPropagation();openM('ck')">Comprar →</button></div></div></div>
+    <div class="ec" onclick="openM('ck')"><div class="ei" style="background-image:url('https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?w=600&q=80')"><div class="etg" style="background:rgba(201,168,76,.85);color:var(--ckd)">PRIVADO</div><div class="spb">⚡ Últimas fechas</div></div><div class="eb"><div class="edt" style="color:var(--ckt)">DOM 29 JUN · 5:00 PM</div><div class="en">Wine Rolling Bar — <span class="t" data-es="Evento Privado" data-en="Private Event">Evento Privado</span></div><div class="ed t" data-es="Tu propio rolling bar portátil premium: vinos seleccionados, bartender certificado y setup completo." data-en="Your own premium portable rolling bar: selected wines, certified bartender and full setup.">Tu propio rolling bar portátil premium: vinos seleccionados, bartender certificado y setup completo.</div><div class="ef"><div><span class="ep" style="color:var(--ck)">Cotizar</span></div><button class="bb" style="background:var(--ck);color:var(--ckg)" onclick="event.stopPropagation();openM('ck')">Reservar →</button></div></div></div>
+  </div>
+  <div class="pg"><div class="pk"><div class="pi">🍷</div><div class="pn t" data-es="Vinos Premium" data-en="Premium Wines">Vinos Premium</div><div class="pd t" data-es="Selección curada" data-en="Curated selection">Selección curada</div></div><div class="pk"><div class="pi">👨‍🍳</div><div class="pn">Bartender Cert.</div><div class="pd t" data-es="Personal profesional" data-en="Professional staff">Personal profesional</div></div><div class="pk"><div class="pi">🌅</div><div class="pn t" data-es="Locaciones Únicas" data-en="Unique Locations">Locaciones Únicas</div><div class="pd t" data-es="Los mejores escenarios" data-en="Best settings">Los mejores escenarios</div></div><div class="pk"><div class="pi">✨</div><div class="pn t" data-es="Sin Complicaciones" data-en="Hassle-Free">Sin Complicaciones</div><div class="pd t" data-es="Nosotros manejamos todo" data-en="We handle everything">Nosotros manejamos todo</div></div></div>
+  <div class="rg"><div class="rv"><div class="rs">★★★★★</div><div class="rt">"Absolutamente increíble. El atardecer con los vinos fue mágico."</div><div class="ra">María G. <span>— Miami</span></div></div><div class="rv"><div class="rs">★★★★★</div><div class="rt">"El servicio fue impecable y los vinos, de primer nivel."</div><div class="ra">Carlos M. <span>— CDMX</span></div></div><div class="rv"><div class="rs">★★★★★</div><div class="rt">"La barra de Spritz fue el hit de la noche."</div><div class="ra">Andrea L. <span>— Cancún</span></div></div></div>
+  <div class="ctb" style="background:linear-gradient(135deg,var(--ck),var(--ckt))"><div><h3>🍷 <span class="t" data-es="¿Listo para tu experiencia?" data-en="Ready?">¿Listo para tu experiencia?</span></h3><p class="t" data-es="Reserva ahora — 20% off en tu primer evento." data-en="Book now — 20% off your first event.">Reserva ahora — 20% off en tu primer evento.</p></div><button class="bc" style="background:var(--ckg);color:var(--ckd)" onclick="openM('ck')">Reservar →</button></div>
+</div>
+</div>
+
+<!-- ═══ ADVENTOUR ═══ -->
+<div class="sec" id="s-av">
+<div class="hero h-av"><div class="hbg"></div><div class="hgr"></div>
+  <div class="hc">
+    <div class="bdg">🌊 <span class="t" data-es="Aventuras Caribeñas" data-en="Caribbean Adventures">Aventuras Caribeñas</span></div>
+    <h1><span class="t" data-es="Vive Cozumel" data-en="Live Cozumel">Vive Cozumel</span> <em><span class="t" data-es="Sin Límites" data-en="Without Limits">Sin Límites</span></em></h1>
+    <p class="t" data-es="Pesca deportiva de clase mundial, buceo en Palancar Reef, snorkel, cenotes cristalinos y las mejores aventuras del Caribe mexicano." data-en="World-class sport fishing, diving at Palancar Reef, snorkeling, crystal cenotes and the best Caribbean adventures.">Pesca deportiva de clase mundial, buceo en Palancar Reef, snorkel, cenotes cristalinos y las mejores aventuras del Caribe mexicano.</p>
+    <div class="hbs"><button class="bh bp" onclick="openM('av')">🎟 <span class="t" data-es="Reservar Aventura" data-en="Book Adventure">Reservar Aventura</span></button><button class="bh bs" onclick="document.getElementById('ev-av').scrollIntoView({behavior:'smooth'})"><span class="t" data-es="Explorar Tours →" data-en="Explore Tours →">Explorar Tours →</span></button></div>
+  </div>
+  <div class="ps">
+    <div class="pt"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&q=80" alt="Cozumel Reef"></div>
+    <div class="pt"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=200&q=80" alt="Tropical Beach"></div>
+    <div class="pt"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=200&q=80" alt="Ocean Waves"></div>
+  </div>
+  <div class="stb"><div class="st"><div class="sn">+500</div><div class="sl t" data-es="Aventureros" data-en="Adventurers">Aventureros</div></div><div class="st"><div class="sn">4.8★</div><div class="sl">TripAdvisor</div></div><div class="st"><div class="sn">12</div><div class="sl">Tours</div></div><div class="st"><div class="sn">2022</div><div class="sl t" data-es="Activos Desde" data-en="Active Since">Activos Desde</div></div></div>
+</div>
+<div class="cw" id="ev-av">
+  <div class="slb" style="color:var(--ao)">— Tours & <span class="t" data-es="Aventuras" data-en="Adventures">Aventuras</span></div>
+  <h2 class="stt t" data-es="Descubre el Cozumel Salvaje" data-en="Discover Wild Cozumel">Descubre el Cozumel Salvaje</h2>
+  <p class="stp t" data-es="Pesca deportiva, buceo y tours eco-turísticos guiados por expertos locales en Cozumel." data-en="Sport fishing, diving and eco-tours guided by local Cozumel experts.">Pesca deportiva, buceo y tours eco-turísticos guiados por expertos locales en Cozumel.</p>
+  <div class="eg">
+    <div class="ec" onclick="openM('av')"><div class="ei" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80')"><div class="etg" style="background:rgba(0,229,255,.85);color:#003264">BESTSELLER</div><div class="spb">⚡ 8 lugares</div></div><div class="eb"><div class="edt" style="color:var(--ao)">DIARIO · 8:00 AM</div><div class="en">🤿 Snorkel + Cenote Secreto</div><div class="ed t" data-es="Arrecife de coral de Cozumel + cenote en el interior de la isla. Equipo y guía bilingüe incluidos." data-en="Cozumel coral reef + cenote. Equipment and bilingual guide included.">Arrecife de coral de Cozumel + cenote en el interior de la isla. Equipo y guía bilingüe incluidos.</div><div class="ef"><div><span class="ep" style="color:var(--ao)">$65 USD</span><span class="epo">$85</span></div><button class="bb" style="background:var(--ao);color:#fff" onclick="event.stopPropagation();openM('av')">Comprar →</button></div></div></div>
+
+    <div class="ec" onclick="openM('av')"><div class="ei" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80')"><div class="etg" style="background:rgba(0,229,255,.85);color:#003264">NUEVO</div></div><div class="eb"><div class="edt" style="color:var(--ao)">LUN, MIÉ, SAB · 6:00 AM</div><div class="en">🎣 <span class="t" data-es="Pesca Deportiva Cozumel" data-en="Sport Fishing Cozumel">Pesca Deportiva Cozumel</span></div><div class="ed t" data-es="Marlín, dorado y wahoo. Embarcación privada, capitán experto, equipo profesional y cerveza a bordo." data-en="Marlin, mahi-mahi and wahoo. Private boat, expert captain, pro equipment and beer on board.">Marlín, dorado y wahoo. Embarcación privada, capitán experto, equipo profesional y cerveza a bordo.</div><div class="ef"><div><span class="ep" style="color:var(--ao)">$350 USD</span></div><button class="bb" style="background:var(--ao);color:#fff" onclick="event.stopPropagation();openM('av')">Reservar →</button></div></div></div>
+
+    <div class="ec" onclick="openM('av')"><div class="ei" style="background-image:url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80')"><div class="etg" style="background:rgba(0,229,255,.85);color:#003264">EXCLUSIVO</div></div><div class="eb"><div class="edt" style="color:var(--ao)">MAR, JUE, SAB · 9:00 AM</div><div class="en">🤿 Buceo en Palancar Reef</div><div class="ed t" data-es="2 inmersiones guiadas en el arrecife más famoso del Caribe + foto profesional + lunch a bordo." data-en="2 guided dives at the Caribbean's most famous reef + pro photos + onboard lunch.">2 inmersiones guiadas en el arrecife más famoso del Caribe + foto profesional + lunch a bordo.</div><div class="ef"><div><span class="ep" style="color:var(--ao)">$120 USD</span></div><button class="bb" style="background:var(--ao);color:#fff" onclick="event.stopPropagation();openM('av')">Comprar →</button></div></div></div>
+  </div>
+  <div class="pg"><div class="pk"><div class="pi">🦺</div><div class="pn">100% Seguro</div><div class="pd t" data-es="Guías con licencia" data-en="Licensed guides">Guías con licencia</div></div><div class="pk"><div class="pi">🐢</div><div class="pn">Eco-turismo</div><div class="pd t" data-es="Respeto por la naturaleza" data-en="Nature respect">Respeto por la naturaleza</div></div><div class="pk"><div class="pi">📸</div><div class="pn t" data-es="Fotos Incluidas" data-en="Photos Included">Fotos Incluidas</div><div class="pd t" data-es="Recuerdos para siempre" data-en="Memories forever">Recuerdos para siempre</div></div><div class="pk"><div class="pi">🚌</div><div class="pn t" data-es="Transporte" data-en="Transport">Transporte</div><div class="pd t" data-es="Pick-up en hotel" data-en="Hotel pick-up">Pick-up en hotel</div></div></div>
+  <div class="rg"><div class="rv"><div class="rs">★★★★★</div><div class="rt">"El snorkel en el arrecife de Cozumel fue lo mejor del viaje."</div><div class="ra">Jake T. <span>— Chicago</span></div></div><div class="rv"><div class="rs">★★★★★</div><div class="rt">"Palancar Reef es de otro mundo. ¡100% recomendado!"</div><div class="ra">Sofía R. <span>— Buenos Aires</span></div></div><div class="rv"><div class="rs">★★★★★</div><div class="rt">"La pesca fue épica. Sacamos un dorado enorme."</div><div class="ra">Mike D. <span>— Dallas, TX</span></div></div></div>
+  <div class="ctb" style="background:linear-gradient(135deg,var(--ad),var(--at))"><div><h3>🌊 <span class="t" data-es="¿Listo para la aventura?" data-en="Ready for adventure?">¿Listo para la aventura?</span></h3><p class="t" data-es="Fotos profesionales gratis en tu tour." data-en="Free pro photos on your tour.">Fotos profesionales gratis en tu tour.</p></div><button class="bc" style="background:var(--ac);color:#fff" onclick="openM('av')">Reservar →</button></div>
+</div>
+</div>
+
+<!-- ═══ CULINARY ═══ -->
+<div class="sec" id="s-cu">
+<div class="hero h-cu"><div class="hbg"></div><div class="hgr"></div>
+  <div class="hc">
+    <div class="bdg">🍽️ <span class="t" data-es="Gastronomía de Yucatán" data-en="Yucatán Gastronomy">Gastronomía de Yucatán</span></div>
+    <h1><span class="t" data-es="Sabores que" data-en="Flavors that">Sabores que</span> <em><span class="t" data-es="Cuentan" data-en="Tell">Cuentan</span></em> <span class="t" data-es="una Historia" data-en="a Story">una Historia</span></h1>
+    <p class="t" data-es="Cocina yucateca ancestral con toque premium. Clases magistrales, cenas frente al mar e ingredientes de la Península." data-en="Ancestral Yucatecan cuisine with a premium touch. Master classes, beachfront dinners and Peninsula ingredients.">Cocina yucateca ancestral con toque premium. Clases magistrales, cenas frente al mar e ingredientes de la Península.</p>
+    <div class="hbs"><button class="bh bp" onclick="openM('cu')">🎟 <span class="t" data-es="Reservar" data-en="Book">Reservar</span></button><button class="bh bs" onclick="document.getElementById('ev-cu').scrollIntoView({behavior:'smooth'})"><span class="t" data-es="Ver Menú →" data-en="View Menu →">Ver Menú →</span></button></div>
+  </div>
+  <div class="ps"><div class="pt"><img src="https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=200&q=80" alt="Food"></div><div class="pt"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=80" alt="Cuisine"></div><div class="pt"><img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=200&q=80" alt="Dish"></div></div>
+  <div class="stb"><div class="st"><div class="sn">+80</div><div class="sl t" data-es="Clases" data-en="Classes">Clases</div></div><div class="st"><div class="sn">5.0★</div><div class="sl">Google</div></div><div class="st"><div class="sn">8</div><div class="sl">Chefs</div></div><div class="st"><div class="sn">2022</div><div class="sl t" data-es="Activos Desde" data-en="Active Since">Activos Desde</div></div></div>
+</div>
+<div class="cw" id="ev-cu">
+  <div class="eg">
+    <div class="ec" onclick="openM('cu')"><div class="ei" style="background-image:url('https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=600&q=80')"><div class="etg" style="background:rgba(230,168,23,.85);color:var(--cg)">BESTSELLER</div><div class="spb">⚡ 3 lugares</div></div><div class="eb"><div class="edt" style="color:var(--ct)">SAB 15 JUN · 10:00 AM</div><div class="en t" data-es="Clase de Cocina Yucateca" data-en="Yucatecan Cooking Class">Clase de Cocina Yucateca</div><div class="ed t" data-es="Cochinita pibil, papadzules y sopa de lima con ingredientes de la Península." data-en="Cochinita pibil, papadzules and lime soup with Peninsula ingredients.">Cochinita pibil, papadzules y sopa de lima con ingredientes de la Península.</div><div class="ef"><div><span class="ep" style="color:var(--ct)">$90 USD</span><span class="epo">$115</span></div><button class="bb" style="background:var(--ct);color:#fff" onclick="event.stopPropagation();openM('cu')">Comprar →</button></div></div></div>
+    <div class="ec" onclick="openM('cu')"><div class="ei" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')"><div class="etg" style="background:rgba(230,168,23,.85);color:var(--cg)">PREMIUM</div></div><div class="eb"><div class="edt" style="color:var(--ct)">VIE 21 JUN · 7:00 PM</div><div class="en t" data-es="Cena Mariscos al Atardecer" data-en="Sunset Seafood Dinner">Cena Mariscos al Atardecer</div><div class="ed t" data-es="Cena privada 5 tiempos, mariscos del Caribe, maridaje premium y mesa frente al mar." data-en="5-course private dinner, Caribbean seafood, premium pairing and oceanfront table.">Cena privada 5 tiempos, mariscos del Caribe, maridaje premium y mesa frente al mar.</div><div class="ef"><div><span class="ep" style="color:var(--ct)">$145 USD</span></div><button class="bb" style="background:var(--ct);color:#fff" onclick="event.stopPropagation();openM('cu')">Comprar →</button></div></div></div>
+    <div class="ec" onclick="openM('cu')"><div class="ei" style="background-image:url('https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80')"><div class="etg" style="background:rgba(230,168,23,.85);color:var(--cg)">FAMILIA</div><div class="spb">⚡ Cupo limitado</div></div><div class="eb"><div class="edt" style="color:var(--ct)">DOM 22 JUN · 11:00 AM</div><div class="en t" data-es="Taller de Chocolate Maya" data-en="Mayan Chocolate Workshop">Taller de Chocolate Maya</div><div class="ed t" data-es="Del cacao al chocolate artesanal. Historia maya + elaboración + degustación." data-en="From cacao to artisanal chocolate. Mayan history + craft + tasting.">Del cacao al chocolate artesanal. Historia maya + elaboración + degustación.</div><div class="ef"><div><span class="ep" style="color:var(--ct)">$55 USD</span><span class="epo">$70</span></div><button class="bb" style="background:var(--ct);color:#fff" onclick="event.stopPropagation();openM('cu')">Comprar →</button></div></div></div>
+  </div>
+  <div class="pg"><div class="pk"><div class="pi">👨‍🍳</div><div class="pn t" data-es="Chefs Locales" data-en="Local Chefs">Chefs Locales</div><div class="pd t" data-es="Tradición maya" data-en="Mayan tradition">Tradición maya</div></div><div class="pk"><div class="pi">🌿</div><div class="pn t" data-es="Frescos" data-en="Fresh">Frescos</div><div class="pd t" data-es="Del mercado, del día" data-en="Market, daily">Del mercado, del día</div></div><div class="pk"><div class="pi">📖</div><div class="pn t" data-es="Recetario" data-en="Recipes">Recetario</div><div class="pd t" data-es="Te llevas las recetas" data-en="Take recipes home">Te llevas las recetas</div></div><div class="pk"><div class="pi">🥂</div><div class="pn t" data-es="Maridaje" data-en="Pairing">Maridaje</div><div class="pd t" data-es="Vinos y mezcal" data-en="Wine and mezcal">Vinos y mezcal</div></div></div>
+  <div class="rg"><div class="rv"><div class="rs">★★★★★</div><div class="rt">"La cochinita pibil ahora es el plato favorito en casa."</div><div class="ra">Patricia W. <span>— Houston</span></div></div><div class="rv"><div class="rs">★★★★★</div><div class="rt">"La cena frente al mar fue la más romántica de nuestra vida."</div><div class="ra">Marco & Ana <span>— Monterrey</span></div></div><div class="rv"><div class="rs">★★★★★</div><div class="rt">"El taller de chocolate fue mágico para mis hijos."</div><div class="ra">Rebecca S. <span>— Toronto</span></div></div></div>
+  <div class="ctb" style="background:linear-gradient(135deg,var(--cd),var(--cg))"><div><h3>🍽️ <span class="t" data-es="¿Listo para despertar tus sentidos?" data-en="Ready to awaken your senses?">¿Listo para despertar tus sentidos?</span></h3><p class="t" data-es="Recetario digital + mezcal de cortesía." data-en="Digital recipes + complimentary mezcal.">Recetario digital + mezcal de cortesía.</p></div><button class="bc" style="background:var(--cs);color:var(--cd)" onclick="openM('cu')">Reservar →</button></div>
+</div>
+</div>
+
+<!-- ═══ EXPERIENCIAS VIVIDAS ═══ -->
+<div class="gallery-section" id="gallery-sec">
+  <div class="gallery-header">
+    <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;color:var(--ckt);margin-bottom:.4rem">— <span class="t" data-es="Momentos Reales" data-en="Real Moments">Momentos Reales</span></div>
+    <h2 class="t" data-es="Experiencias Vividas" data-en="Lived Experiences">Experiencias Vividas</h2>
+    <p class="t" data-es="Así se viven nuestras experiencias. Fotos reales de nuestros eventos y tours en Cozumel." data-en="This is how our experiences feel. Real photos from our events and tours in Cozumel.">Así se viven nuestras experiencias. Fotos reales de nuestros eventos y tours en Cozumel.</p>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Placeholders — reemplaza src con tus fotos reales -->
+    <div class="gallery-item"><div class="gallery-placeholder"><span>📸</span><p class="t" data-es="Tu foto aquí" data-en="Your photo here">Tu foto aquí</p></div></div>
+    <div class="gallery-item"><div class="gallery-placeholder"><span>🍷</span><p>Cork Event</p></div></div>
+    <div class="gallery-item"><div class="gallery-placeholder"><span>🤿</span><p>Snorkel Tour</p></div></div>
+    <div class="gallery-item"><div class="gallery-placeholder"><span>🎣</span><p class="t" data-es="Pesca Deportiva" data-en="Sport Fishing">Pesca Deportiva</p></div></div>
+    <div class="gallery-item"><div class="gallery-placeholder"><span>🍽️</span><p>Culinary Class</p></div></div>
+    <div class="gallery-item"><div class="gallery-placeholder"><span>🌅</span><p>Sunset Session</p></div></div>
+    <div class="gallery-item"><div class="gallery-placeholder"><span>🥂</span><p>Wine Tasting</p></div></div>
+    <div class="gallery-item"><div class="gallery-placeholder"><span>🐢</span><p>Sea Turtle</p></div></div>
+  </div>
+  <div class="gallery-cta">
+    <p class="t" data-es="¿Quieres ver tu foto aquí? Comparte tu experiencia con nosotros." data-en="Want to see your photo here? Share your experience with us.">¿Quieres ver tu foto aquí? Comparte tu experiencia con nosotros.</p>
+    <button onclick="window.open('https://wa.me/529878000932?text=Hola!%20Quiero%20compartir%20mis%20fotos%20de%20mi%20experiencia%20en%20Cozumel','_blank')">📸 <span class="t" data-es="Compartir mi Experiencia" data-en="Share my Experience">Compartir mi Experiencia</span></button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="ft">
+<div class="fi">
+  <div><h4>Cozumel Xperiences</h4><p class="t" data-es="Experiencias premium en Cozumel desde 2022." data-en="Premium Cozumel experiences since 2022.">Experiencias premium en Cozumel desde 2022.</p></div>
+  <div><h4 class="t" data-es="Experiencias" data-en="Experiences">Experiencias</h4><a href="#cork-cozumel" onclick="showTab('ck')">🍷 Cork Cozumel</a><a href="#cozumel-adventour" onclick="showTab('av')">🌊 Adventour</a><a href="#culinary-xperiences" onclick="showTab('cu')">🍽️ Culinary</a></div>
+  <div>
+    <h4 class="t" data-es="Contacto" data-en="Contact">Contacto</h4>
+    <a href="mailto:cozumelguestservice@gmail.com">📧 cozumelguestservice@gmail.com</a>
+    <a href="https://wa.me/529878000932">📱 +52 987 800 0932</a>
+    <a href="#">📍 Cozumel, Quintana Roo, MX</a>
+  </div>
+  <div><h4>Legal</h4><a class="t" data-es="Términos y Condiciones" data-en="Terms">Términos y Condiciones</a><a class="t" data-es="Privacidad" data-en="Privacy">Privacidad</a><a class="t" data-es="Cancelación" data-en="Cancellation">Cancelación</a></div>
+</div>
+<div class="fb">© 2022–2026 Cozumel Xperiences.</div>
+</footer>
+
+<!-- WHATSAPP — TU NÚMERO REAL -->
+<a class="wa" href="https://wa.me/529878000932?text=Hola%20Cozumel%20Xperiences!%20Me%20interesa%20reservar." target="_blank" rel="noopener">💬</a>
+
+<!-- MODAL -->
+<div class="mo" id="modal" onclick="if(event.target===this)closeM()">
+<div class="md">
+  <div class="mh" id="mHead"><button class="mx" onclick="closeM()">✕</button><div style="font-size:.68rem;opacity:.7;letter-spacing:1px;text-transform:uppercase;margin-bottom:.2rem" id="mSub"></div><div style="font-size:1.2rem;font-weight:800" id="mTitle"></div><div style="font-size:.82rem;opacity:.8;margin-top:.15rem" id="mDate"></div></div>
+  <div class="mby">
+    <div style="font-size:.72rem;font-weight:700;color:#555;text-transform:uppercase;margin-bottom:.5rem" class="t" data-es="Tipo de boleto" data-en="Ticket type">Tipo de boleto</div>
+    <div class="to" id="tOpts"></div>
+    <div class="qr"><div class="ql t" data-es="Cantidad" data-en="Qty">Cantidad</div><div class="qc"><button class="qb" onclick="cQ(-1)">−</button><div class="qn" id="qD">1</div><button class="qb" onclick="cQ(1)">+</button></div></div>
+    <div class="fg"><label class="t" data-es="Nombre" data-en="Name">Nombre</label><input id="iN" placeholder="Tu nombre..."></div>
+    <div class="fg"><label>Email</label><input type="email" id="iE" placeholder="correo@ejemplo.com"></div>
+    <div class="fg"><label>WhatsApp</label><input type="tel" id="iP" placeholder="+52 987 000 0000"></div>
+    <div class="tr"><div class="tl">Total</div><div class="ta" id="tDis">$85 USD</div></div>
+    <button class="bpy" id="bPay" onclick="pay()">🎟 <span class="t" data-es="Confirmar y Pagar →" data-en="Confirm & Pay →">Confirmar y Pagar →</span></button>
+    <div class="snote">🔒 <span class="t" data-es="Pago seguro · Confirmación por email y WhatsApp" data-en="Secure · Confirmation via email & WhatsApp">Pago seguro · Confirmación por email y WhatsApp</span></div>
+  </div>
+</div>
+</div>
+
+<script>
+let cT='ck',q=1,sT=0,lang='es';
+const tks={ck:[{n:'General',p:85,c:'USD'},{n:'VIP + Maridaje',p:130,c:'USD'},{n:'Cork Sessions',p:1200,c:'MXN'}],av:[{n:'Individual',p:65,c:'USD'},{n:'Pareja',p:120,c:'USD'},{n:'Pesca Privada',p:350,c:'USD'}],cu:[{n:'Individual',p:90,c:'USD'},{n:'Pareja Chef',p:160,c:'USD'}]};
+const mI={ck:{t:'Cork Sunset Sessions Vol. 1',d:'📅 15 Jun · Wine, Sunset & Beats',s:'🍷 Cork Cozumel'},av:{t:'Snorkel + Cenote Secreto',d:'📅 Diario · 8:00 AM',s:'🌊 Cozumel Adventour'},cu:{t:'Clase de Cocina Yucateca',d:'📅 Sáb 15 Jun · 10:00 AM',s:'🍽️ Culinary Xperiences'}};
+const hcl={ck:'linear-gradient(135deg,#0B3D52,#1A7A6E)',av:'linear-gradient(135deg,#0077B6,#00B4D8)',cu:'linear-gradient(135deg,#1B4332,#B85C38)'};
+const bcl={ck:'background:#0B3D52;color:#C9A84C',av:'background:#0077B6;color:#fff',cu:'background:#B85C38;color:#fff'};
+const scl={ck:'border-color:#0B3D52;background:#EBF4F7',av:'border-color:#0077B6;background:#E6F3FB',cu:'border-color:#B85C38;background:#FBF0EB'};
+const pcl={ck:'color:#0B3D52',av:'color:#0077B6',cu:'color:#B85C38'};
+
+function showTab(t){['ck','av','cu'].forEach(i=>{document.getElementById('s-'+i).classList.remove('on');document.getElementById('t-'+i).className='nt'});document.getElementById('s-'+t).classList.add('on');document.getElementById('t-'+t).classList.add({ck:'a-ck',av:'a-av',cu:'a-cu'}[t]);cT=t;window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','#'+{ck:'cork-cozumel',av:'cozumel-adventour',cu:'culinary-xperiences'}[t]);document.getElementById('gallery-sec').style.display='block'}
+function togMM(){document.getElementById('mmenu').classList.toggle('o');document.getElementById('mbtn').textContent=document.getElementById('mmenu').classList.contains('o')?'✕':'☰'}
+function closeMM(){document.getElementById('mmenu').classList.remove('o');document.getElementById('mbtn').textContent='☰'}
+function openM(t){cT=t;sT=0;q=1;const d=mI[t];document.getElementById('mTitle').textContent=d.t;document.getElementById('mDate').textContent=d.d;document.getElementById('mSub').textContent=d.s;document.getElementById('mHead').style.background=hcl[t];document.getElementById('bPay').style.cssText=bcl[t];bldT(t);uT();document.getElementById('modal').classList.add('op');document.body.style.overflow='hidden'}
+function closeM(){document.getElementById('modal').classList.remove('op');document.body.style.overflow=''}
+function bldT(t){const w=document.getElementById('tOpts');w.innerHTML='';tks[t].forEach((tk,i)=>{const d=document.createElement('div');d.className='tp'+(i===0?' sel':'');if(i===0)d.style.cssText=scl[t];d.innerHTML='<div class="tn">'+tk.n+'</div><div class="tpr" style="'+pcl[t]+'">$'+tk.p.toLocaleString()+' '+tk.c+'</div>';d.onclick=()=>{w.querySelectorAll('.tp').forEach(el=>{el.className='tp';el.style.cssText=''});d.className='tp sel';d.style.cssText=scl[t];sT=i;uT()};w.appendChild(d)})}
+function cQ(n){q=Math.max(1,Math.min(10,q+n));uT()}
+function uT(){const tk=tks[cT][sT];document.getElementById('tDis').textContent='$'+(tk.p*q).toLocaleString()+' '+tk.c;document.getElementById('qD').textContent=q}
+function pay(){const n=document.getElementById('iN').value.trim(),e=document.getElementById('iE').value.trim();if(!n||!e){alert(lang==='es'?'Completa tu nombre y correo.':'Fill name and email.');return}const b=document.getElementById('bPay');b.textContent='⏳...';b.style.opacity='.6';b.disabled=true;setTimeout(()=>{closeM();b.innerHTML='🎟 '+(lang==='es'?'Confirmar y Pagar →':'Confirm & Pay →');b.style.opacity='1';b.disabled=false;['iN','iE','iP'].forEach(id=>document.getElementById(id).value='');alert((lang==='es'?'✅ ¡Gracias '+n+'!\nConfirmación enviada a '+e+'\nTe contactaremos por WhatsApp.\n¡Nos vemos en Cozumel! 🌴':'✅ Thank you '+n+'!\nSent to '+e+'\nSee you in Cozumel! 🌴'))},2000)}
+function setLang(l){lang=l;document.getElementById('lES').className=l==='es'?'on':'';document.getElementById('lEN').className=l==='en'?'on':'';document.querySelectorAll('.t').forEach(el=>{const v=el.getAttribute('data-'+l);if(v)el.textContent=v})}
+function startCD(){const target=new Date('2025-06-15T18:30:00-05:00').getTime();const tick=()=>{const diff=Math.max(0,Math.floor((target-Date.now())/1000));const p=n=>String(n).padStart(2,'0');document.getElementById('c1d').textContent=p(Math.floor(diff/86400));document.getElementById('c1h').textContent=p(Math.floor((diff%86400)/3600));document.getElementById('c1m').textContent=p(Math.floor((diff%3600)/60));document.getElementById('c1s').textContent=p(diff%60)};setInterval(tick,1000);tick()}
+startCD();
+window.addEventListener('scroll',()=>{document.getElementById('topbar').classList.toggle('s',window.scrollY>20)});
+(function(){const h=location.hash;if(h==='#cozumel-adventour')showTab('av');else if(h==='#culinary-xperiences')showTab('cu');else showTab('ck')})();
+window.addEventListener('hashchange',()=>{const h=location.hash;if(h==='#cork-cozumel')showTab('ck');else if(h==='#cozumel-adventour')showTab('av');else if(h==='#culinary-xperiences')showTab('cu')});
+</script>
+</body>
+</html>
